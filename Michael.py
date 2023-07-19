@@ -1,8 +1,28 @@
 # This is Michael's code 
 
-print('Hello COP3502c')
-x = 'hello'
-for i in x:
-	print(i)
+def encode(string):
+	new_string = ''
+	for i in string:
+		new_string += str(int(i)+3)
+	return new_string
 
-# This is the change I am making to my file and uploading
+
+def menu():
+	print('Menu\n-------------\n1. Encode\n2. Decode\n3. Quit')
+
+
+print(encode('112233'))
+if __name__ == '__main__':
+	while True:
+		menu()
+		option = int(input('Please enter an option: '))
+		if option == 1:
+			password = input('Please enter your password to encode: ')
+			encoded_password = encode(password)
+			print('Your password has been encoded and stored!')
+		elif option == 2:
+			debugged_password = decode(encoded_password)
+			print(f'The encoded password is {encoded_password}, and '
+				  f'the original password is {debugged_password}')
+		elif option == 3:
+			break
