@@ -9,6 +9,14 @@ def encode(string):
 			new_string += str(int(i)+3)
 	return new_string
 
+def decode(string):
+	decoded_string = ""
+	for i in string:
+		if int(i) < 3:
+			decoded_string += str(int(i) + 7)
+		else:
+			decoded_string += str(int(i) - 3)
+	return decoded_string
 
 def menu():
 	print('Menu\n-------------\n1. Encode\n2. Decode\n3. Quit')
