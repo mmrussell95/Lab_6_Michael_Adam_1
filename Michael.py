@@ -11,8 +11,7 @@ def menu():
 	print('Menu\n-------------\n1. Encode\n2. Decode\n3. Quit')
 
 
-print(encode('112233'))
-if __name__ == '__main__':
+def main():
 	while True:
 		menu()
 		option = int(input('Please enter an option: '))
@@ -26,3 +25,7 @@ if __name__ == '__main__':
 				  f'the original password is {debugged_password}')
 		elif option == 3:
 			break
+
+
+if __name__ == '__main__':
+	main()
